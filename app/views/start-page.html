@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+{% from "button/macro.njk" import button %}
+{% from "inset-text/macro.njk" import insetText %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set dummyNhsNumber = "999 123 4567" %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "NHS services"
+      },
+      {
+        href: "#",
+        text: "Online services"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">Apply to include your study in the Be Part of Research registry</h1>
+      <p>This form has four sections. These are:</p>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>overview</li>
+        <li>study details</li>
+        <li>sponsorship and funding</li>
+        <li>recruitment</li>
+      </ul>
+
+      <p>You can't save your progress once you start. Make sure you have all the information you need for the four sections before you begin, as you'll need to complete the application at one go.</p>
+    <p>By using this service you agree to our <a href="#">terms of use</a> and confirm that you have read the <a href="#">privacy policy</a>.</p>
+
+
+      {{ button({
+        text: "Start now",
+        href: "#"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

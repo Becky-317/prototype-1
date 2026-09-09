@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Service name goes here',
+  serviceName: 'RMS start page prototype',
 
   // Port to run the prototype on locally
   port: 3000

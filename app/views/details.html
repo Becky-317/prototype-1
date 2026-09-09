@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% from "back-link/macro.njk" import backLink %}
+{{ textarea({
+  name: "details",
+  id: "details",
+  label: {
+    text: "Tell us your symptoms of magical powers",
+    size: "l",
+    isPageHeading: true
+  }
+}) }}
+
+{% from "button/macro.njk" import button %}
